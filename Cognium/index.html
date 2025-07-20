@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGNIUM - Cognitive Network Interface</title>
+    <link rel="icon" href="assets/Images/Icons/Microsoft%20Windows%203%20Computer.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div class="boot-container">
+            <div class="boot-logo">
+                <div class="logo-text">COGNIUM</div>
+                <div class="logo-subtitle">Cognitive Network Interface v1.0</div>
+                <div class="logo-corp">OmniCorp Systems Division</div>
+            </div>
+            <div class="boot-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Loading system components...</div>
+            </div>
+            <div class="boot-text">
+                <div class="boot-line">OmniCorp BIOS v4.3.1 - Copyright 1994</div>
+                <div class="boot-line">Initializing COGNIUM Neural Interface...</div>
+                <div class="boot-line">Memory Test: <span class="success">640K OK</span></div>
+                <div class="boot-line">Extended Memory: <span class="success">4096K OK</span></div>
+                <div class="boot-line">Cognitive Module: <span class="warning">STANDBY</span></div>
+                <div class="boot-line">Loading C:\COGNIUM\SYSTEM\...</div>
+                <div class="boot-line glitch" data-text="Core system integrity... [CORRUPTED]">Core system integrity... <span class="error">[CORRUPTED]</span></div>
+                <div class="boot-line">Attempting recovery...</div>
+                <div class="boot-line blinking">Press any key to continue...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div id="desktop" style="display:none;">
+        <!-- Post-it Notes Widget -->
+        <div class="postit-note" id="reminderNote" style="left: 50px; top: 80px;">
+            <div class="postit-header">
+                <span>Reminders</span>
+                <button class="postit-close" onclick="closePostit()">&times;</button>
+            </div>
+            <div class="postit-content">
+                Call mom<br>
+                Finch meeting 3pm<br>
+                <span style="color: red; font-weight: bold;">CHECK JANUS LOGS!!!</span>
+            </div>
+        </div>
+        
+        <!-- Desktop icons will be populated by JavaScript -->
+    </div>
+
+    <!-- Taskbar -->
+    <div id="taskbar" style="display:none;">
+        <button id="startButton" class="start-button">
+            <img src="assets/Images/Icons/Microsoft%20Windows%203%20Start.png" alt="Start">
+            <span>Start</span>
+        </button>
+        <div id="taskbar-apps"></div>
+        <div id="system-tray">
+            <div id="clock"></div>
+            <img src="assets/Images/Icons/Microsoft%20Windows%203%20%20MSMAI007.png" alt="Volume" class="tray-icon">
+        </div>
+    </div>
+
+    <!-- Window container -->
+    <div id="window-container"></div>
+
+    <!-- Loading Scripts -->
+    <script src="js/globals.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/fileSystem.js"></script>
+    <script src="js/windowManager.js"></script>
+    <script src="js/apps.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
